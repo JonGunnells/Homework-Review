@@ -24,8 +24,10 @@ public class Main {
         int i = 1;
         for (Inventory inventory : items)
         {
-            System.out.println("[" + inventory.quantity + "] " + i + ". " + inventory.text);
+            //System.out.println ("[" + inventory.quantity + "] " + i + ". " + inventory.name);
+            System.out.printf("[ %s ].", inventory.quantity, i, inventory.name);
             i++;
+
         }
     }
 

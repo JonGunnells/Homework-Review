@@ -1,13 +1,17 @@
 
 
-
 public class Inventory {
-    String text;
+    String name;
     int quantity;
+    String category;
 
+    public Inventory() {
+    }
 
-    public Inventory(String text, int quantity) {
-        this.text = text;
+    public Inventory(String text, int quantity, String category) {
+        this.name = text;
         this.quantity = quantity;
+        this.category = category;
     }
 }
+
