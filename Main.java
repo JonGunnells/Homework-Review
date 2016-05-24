@@ -29,6 +29,7 @@ public class Main {
         }
     }
 
+
     public static void updateQuantity(Scanner scanner, ArrayList<Inventory> items) {
         System.out.println("Enter item you with to update");
         String itemStr = scanner.nextLine();
