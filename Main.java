@@ -3,15 +3,22 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+
+
 public class Main {
 
-    public static void addItem(Scanner scanner, ArrayList<Inventory> items) {
-        System.out.println("Enter item to add to inventory");
-        String text = scanner.nextLine();
-        Inventory item = new Inventory(text, 0);
-        items.add(item);
 
-    }
+
+
+        public static void addItem (Scanner scanner, ArrayList < Inventory > items){
+            System.out.println("Enter item to add to inventory");
+            String text = scanner.nextLine();
+            String category = scanner.nextLine();
+            Inventory item = new Inventory(text, 0, category);
+            items.add(item);
+
+        }
 
     public static void removeItem(Scanner scanner, ArrayList<Inventory> items) {
         System.out.println("Enter item you wish to remove");
@@ -22,8 +29,7 @@ public class Main {
 
     public static void listItem(ArrayList<Inventory> items) {
         int i = 1;
-        for (Inventory inventory : items)
-        {
+        for (Inventory inventory : items) {
             //System.out.println ("[" + inventory.quantity + "] " + i + ". " + inventory.name);
             System.out.printf("[ %s ].", inventory.quantity, i, inventory.name);
             i++;
@@ -78,11 +84,12 @@ public class Main {
 
                 default:
                     System.out.println("Invalid option.");
-
+                }
 
             }
 
         }
 
+
     }
-}
+
